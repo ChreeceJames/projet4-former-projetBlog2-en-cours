@@ -1,0 +1,9 @@
+<section>
+  {{ comments }}
+  <form action="{{ working folder }}/" method="POST">
+    <input type="hidden" value="{{ id }}" name="chapterID">
+    <input type="text" name="commentaires_pseudo" placeholder="Votre pseudo." /><br/>
+    <textarea name="commentaires_contenu" placeholder="Votre Commentaire..."></textarea><br/>
+    <input type="submit" value="Poster mon commentaire" name="submit_commentaire"/>
+  </form>
+</section>

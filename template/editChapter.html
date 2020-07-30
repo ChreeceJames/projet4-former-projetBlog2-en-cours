@@ -1,0 +1,27 @@
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>tinymce.init({selector:'textarea'});</script>
+
+<h1> Éditez un chapitre </h1>
+
+{{ message }}
+<form method="POST" action="../update">
+    <input type="hidden" name="id" value="{{ id }}">
+    <label>
+        Titre du chapitre
+        <input type="text" value="{{ title }}" name="titre">
+    </label>
+
+    <label>
+        Contenu
+        <textarea name="contenu">
+            {{ content }}
+        </textarea>
+    </label>
+
+    <label>
+        Slug
+        <input type="text" value="{{ slug }}" name="slug">
+    </label>
+
+    <input type="submit" value="Valider">
+</form>
